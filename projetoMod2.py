@@ -31,10 +31,9 @@ print('hora', hora_atual)
 print(saudacao)
 
 print(' Seja bem vindo(a) ao questionário Sobre Python ! ')
-nome_entrevistado= str(input('Digite seu nome :'))
-nome_entrevistado= str(input('Digite sua idade :'))
-nome_entrevistado= str(input('Digite como voçê se identifica (gênero):'))
-nome_entrevistado= str(input('voçê sabe o que seria Python? [1-sim]  [2-não]  [3-não sei responder] ='))
-
+nome_entrevistado = str(input('Digite seu nome :'))
+idade_entrevistado = str(input('Digite sua idade :'))
+pronome_entrevistado = str(input('Digite como voçê se identifica (gênero):'))
+resposta_1 = str(input('voçê sabe o que seria Python? [1-sim]  [2-não]  [3-não sei responder] ='))
 
 
