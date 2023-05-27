@@ -30,6 +30,7 @@ print('data:', dia_atual)
 print('hora', hora_atual)
 print(saudacao)
 
+# questionario de multliplss escolhas.
 print(' Seja bem vindo(a) ao questionário Sobre Python ! ')
 nome_entrevistado= str(input('Digite seu nome :'))
 nome_entrevistado= str(input('Digite sua idade :'))
