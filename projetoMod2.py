@@ -37,4 +37,3 @@ idade_entrevistado = str(input('Digite sua idade :'))
 pronome_entrevistado = str(input('Digite como voçê se identifica (gênero):'))
 resposta_1 = str(input('voçê sabe o que seria Python? [1-sim]  [2-não]  [3-não sei responder] ='))
 
-
