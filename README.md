@@ -1,5 +1,7 @@
 #  Titulo
 ## Projeto SQUAD 5 Mod  2
+![image](https://github.com/Aron151281/squad5_projeto_mod2/assets/132007858/93ab2550-9f13-47d8-8c42-e6953c4e42da)
+
 ### Descrição do projeto:
 Uma startup do ramo educacional está desenvovendo um aplicativo que verifica o nivel de conhecimento de um candidato sobre um determinado assunto ,
 Para isso foi criado um questionario  com 3 respostas  pré definidas para se obter a coleta e o arquivamento dos dados em um arquivo .csv para uma analise e uma tomasda de decicçoes futuras.
