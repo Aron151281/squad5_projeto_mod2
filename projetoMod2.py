@@ -34,15 +34,20 @@ print(saudacao)
 # questionario de multliplas escolhas que irá mostrar data e hora da resposta.
 print(' Seja bem vindo(a) ao questionário Sobre Python ! ')
 
+# pegar a primeira linha do .csv
+primeiraLinha = open('respostas.csv')
+reader = csv.reader(primeiraLinha)
+row1 = next(reader)
+primeiraLinha.close()
+
 #salva as respostas em um arquivo csv
-with open('respostas.csv', newline='') as file:
-    reader = csv.reader(file)
-    row1 = next(reader)
-    if row1 == ['Data', 'Hora', 'Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5']:
-        print('engual')
-    exit()
+
+with open('respostas.csv','a', newline='') as file:
+    
     writer = csv.writer(file)
-    writer.writerow(['Data', 'Hora', 'Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5'])
+    if row1 != ['Data', 'Hora', 'Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5']:
+        writer.writerow(['Data', 'Hora', 'Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5'])
+    
     idade_entrevistado = ''
     while idade_entrevistado != '00':
         idade_entrevistado = str(input('Digite sua idade : '))
@@ -92,4 +97,4 @@ with open('respostas.csv', newline='') as file:
 # 25,Rafael,M,1,1,1,2,1,06/06/23,16:24:40
 # 33,Jesus,M,2,2,2,2,1,06/06/23,16:24:40
 # 22,Bianca,F,1,2,1,2,1,06/06/23,16:24:40
-# Babu,Babu,Babu,3,3,3,3,3,06/06/23,16:24:40
+# 46,Babu,M,3,3,3,3,3,06/06/23,16:24:40
