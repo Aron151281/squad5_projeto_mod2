@@ -44,10 +44,12 @@ primeiraLinha.close()
 
 with open('respostas.csv','a', newline='') as file:
     
+    # cria um cabeçalho se não tiver
     writer = csv.writer(file)
-    if row1 != ['Data', 'Hora', 'Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5']:
-        writer.writerow(['Data', 'Hora', 'Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5'])
+    if row1 != ['Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data', 'Hora']:
+        writer.writerow(['Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data', 'Hora'])
     
+    # cria um loop baseado na idade que para ao inserir a idade '00'
     idade_entrevistado = ''
     while idade_entrevistado != '00':
         idade_entrevistado = str(input('Digite sua idade : '))
@@ -90,11 +92,4 @@ with open('respostas.csv','a', newline='') as file:
                             '\nR: '))
 
         print('\nPróximo entrevistado! digite 00 na idade para parar!\n')
-        writer.writerow([idade_entrevistado, nome_entrevistado, pronome_entrevistado, resposta_1, resposta_2, resposta_3, resposta_4, resposta_5, dia_atual, hora_atual])
-
-
-# Data,Hora,Nome,Idade,Pronome,Resposta 1,Resposta 2,Resposta 3,Resposta 4,Resposta 5
-# 25,Rafael,M,1,1,1,2,1,06/06/23,16:24:40
-# 33,Jesus,M,2,2,2,2,1,06/06/23,16:24:40
-# 22,Bianca,F,1,2,1,2,1,06/06/23,16:24:40
-# 46,Babu,M,3,3,3,3,3,06/06/23,16:24:40
+        writer.writerow([nome_entrevistado, idade_entrevistado, pronome_entrevistado, resposta_1, resposta_2, resposta_3, resposta_4, resposta_5, dia_atual, hora_atual])
