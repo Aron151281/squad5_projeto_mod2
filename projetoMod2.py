@@ -55,41 +55,68 @@ with open('respostas.csv','a', newline='') as file:
         idade_entrevistado = str(input('Digite sua idade : '))
         if idade_entrevistado == '00':
             break
-
+            dia_atual = agora.strftime('%d/%m/%y')
+            hora_atual = agora.strftime('%H:%M:%S')
+            print('data:', dia_atual)       
+            print('hora', hora_atual)       
+        
         nome_entrevistado = str(input('Digite seu nome : '))
+            dia_atual = agora.strftime('%d/%m/%y')
+            hora_atual = agora.strftime('%H:%M:%S')             
+            print('data:', dia_atual)       
+            print('hora', hora_atual)
 
-        pronome_entrevistado = str(input('Digite como você se identifica (gênero): '))
-
+        pronome_entrevistado = str(input('Digite como você se identifica (gênero): '))     
+            dia_atual = agora.strftime('%d/%m/%y')  
+            hora_atual = agora.strftime('%H:%M:%S')
+            print('data:', dia_atual)       
+            print('hora', hora_atual)
 
         resposta_1 = str(input('Você sabe o que seria Python?'
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
                             '\nR: '))
-
-        resposta_2 = str(input('Você sabe utilizar alguma biblioteca do Python? Como Pandas, Numpy etc?'
+                            dia_atual = agora.strftime('%d/%m/%y')
+                            hora_atual = agora.strftime('%H:%M:%S')             
+                            print('data:', dia_atual)
+                            print('hora', hora_atual)
+        resposta_2 = str(input('Você sabe utilizar alguma biblioteca do Python? Como Pandas, Numpy etc?' 
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
-                            '\nR: '))
+                            '\nR: '))       
+                            dia_atual = agora.strftime('%d/%m/%y')
+                                hora_atual = agora.strftime('%H:%M:%S
+                            print('data:', dia_atual)
+                             print('hora', hora_atual)                                   
 
         resposta_3 = str(input('Você sabe oque é um arquivo .csv? '
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
                             '\nR: '))
-
+                            dia_atual = agora.strftime('%d/%m/%y')  
+                            hora_atual = agora.strftime('%H:%M:%S')
+                            print('data:', dia_atual)
+                            print('hora', hora_atual)               
         resposta_4 = str(input('Você conseguiria criar um aplicativo mobile do zero?'
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
                             '\nR: '))
-
+                                dia_atual = agora.strftime('%d/%m/%y')
+                            hora_atual = agora.strftime('%H:%M:%S')
+                            print('data:', dia_atual)
+                            print('hora', hora_atual)                       
         resposta_5 = str(input('Você é bom no que faz?'
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
                             '\nR: '))
-
+                            dia_atual = agora.strftime('%d/%m/%y')                      
+                            hora_atual = agora.strftime('%H:%M:%S')             
+                            print('data:', dia_atual)               
+                            print('hora', hora_atual)
         print('\nPróximo entrevistado! digite 00 na idade para parar!\n')
         writer.writerow([nome_entrevistado, idade_entrevistado, pronome_entrevistado, resposta_1, resposta_2, resposta_3, resposta_4, resposta_5, dia_atual, hora_atual])
