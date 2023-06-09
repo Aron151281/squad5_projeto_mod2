@@ -20,22 +20,23 @@ if 6 <= hora < 12:
 
     # se a hora for maior ou igual a 12 e menor que 18 , dizer boa tarde:
 elif 12 <= hora < 18 :
-    saudacao ='Boa tarde entrevistado(a) !'
+    saudacao ='Boa tarde entrevistado(a)!'
 
     # senao dizer boa noite:
 else:
     saudacao = 'Boa noite entrevistado(a)!'
 
 #exibe a data, hora e saudação
-print('data:', dia_atual)
-print('hora', hora_atual)
+print('Data:', dia_atual, 'Hora', hora_atual)
+
 print(saudacao)
 
 # questionario de multliplas escolhas que irá mostrar data e hora da resposta.
-print(' Seja bem vindo(a) ao questionário Sobre Python ! ')
+print('Seja bem vindo(a) ao questionário Sobre Python !')
 
 # pegar a primeira linha do .csv
 primeiraLinha = open('respostas.csv')
+ 
 reader = csv.reader(primeiraLinha)
 row1 = next(reader)
 primeiraLinha.close()
@@ -46,77 +47,98 @@ with open('respostas.csv','a', newline='') as file:
     
     # cria um cabeçalho se não tiver
     writer = csv.writer(file)
+    
     if row1 != ['Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data', 'Hora']:
         writer.writerow(['Nome', 'Idade', 'Pronome', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data', 'Hora'])
     
     # cria um loop baseado na idade que para ao inserir a idade '00'
     idade_entrevistado = ''
+    
     while idade_entrevistado != '00':
         idade_entrevistado = str(input('Digite sua idade : '))
+        
         if idade_entrevistado == '00':
             break
-            dia_atual = agora.strftime('%d/%m/%y')
-            hora_atual = agora.strftime('%H:%M:%S')
-            print('data:', dia_atual)       
-            print('hora', hora_atual)       
+        dia_atual = agora.strftime('%d/%m/%y')
+        hora_atual = agora.strftime('%H:%M:%S'/n)                           
+        print('Data:', dia_atual, '-' 'Hora', hora_atual)       
+        print('='*30,'\n')       
         
         nome_entrevistado = str(input('Digite seu nome : '))
-            dia_atual = agora.strftime('%d/%m/%y')
-            hora_atual = agora.strftime('%H:%M:%S')             
-            print('data:', dia_atual)       
-            print('hora', hora_atual)
+        dia_atual = agora.strftime('%d/%m/%y')
+        hora_atual = agora.strftime('%H:%M:%S')             
+        print('data:', dia_atual)       
+        print('hora', hora_atual)
+        print('='*30,'\n')
 
         pronome_entrevistado = str(input('Digite como você se identifica (gênero): '))     
-            dia_atual = agora.strftime('%d/%m/%y')  
-            hora_atual = agora.strftime('%H:%M:%S')
-            print('data:', dia_atual)       
-            print('hora', hora_atual)
+        dia_atual = agora.strftime('%d/%m/%y')  
+        hora_atual = agora.strftime('%H:%M:%S')
+        print('data:', dia_atual)       
+        print('hora', hora_atual)
+        print('='*30,'\n')
 
-        resposta_1 = str(input('Você sabe o que seria Python?'
+        resposta_1 = str(input('Você sabe o que seria Python?\n'
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
                             '\nR: '))
-                            dia_atual = agora.strftime('%d/%m/%y')
-                            hora_atual = agora.strftime('%H:%M:%S')             
-                            print('data:', dia_atual)
-                            print('hora', hora_atual)
-        resposta_2 = str(input('Você sabe utilizar alguma biblioteca do Python? Como Pandas, Numpy etc?' 
+        
+        dia_atual = agora.strftime('%d/%m/%y')
+        hora_atual = agora.strftime('%H:%M:%S')             
+        print('data:', dia_atual)
+        print('hora', hora_atual)
+        print('='*30,'\n')
+        
+        resposta_2 = str(input('Você sabe utilizar alguma biblioteca do Python? Como Pandas, Numpy etc?\n' 
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
-                            '\nR: '))       
-                            dia_atual = agora.strftime('%d/%m/%y')
-                                hora_atual = agora.strftime('%H:%M:%S
-                            print('data:', dia_atual)
-                             print('hora', hora_atual)                                   
+                            '\nR: '))
+        
+               
+        dia_atual = agora.strftime('%d/%m/%y')
+        hora_atual = agora.strftime('%H:%M:%S')
+        print('data:', dia_atual)
+        print('hora', hora_atual) 
+        print('='*30,'\n')                                  
 
-        resposta_3 = str(input('Você sabe oque é um arquivo .csv? '
+        resposta_3 = str(input('Você sabe oque é um arquivo .csv?\n'
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
                             '\nR: '))
-                            dia_atual = agora.strftime('%d/%m/%y')  
-                            hora_atual = agora.strftime('%H:%M:%S')
-                            print('data:', dia_atual)
-                            print('hora', hora_atual)               
-        resposta_4 = str(input('Você conseguiria criar um aplicativo mobile do zero?'
+        
+        dia_atual = agora.strftime('%d/%m/%y')  
+        hora_atual = agora.strftime('%H:%M:%S')
+        print('data:', dia_atual)
+        print('hora', hora_atual) 
+        print('='*30,'\n')
+                      
+        resposta_4 = str(input('Você conseguiria criar um aplicativo mobile do zero?\n'
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
                             '\nR: '))
-                                dia_atual = agora.strftime('%d/%m/%y')
-                            hora_atual = agora.strftime('%H:%M:%S')
-                            print('data:', dia_atual)
-                            print('hora', hora_atual)                       
-        resposta_5 = str(input('Você é bom no que faz?'
+        
+        dia_atual = agora.strftime('%d/%m/%y')
+        hora_atual = agora.strftime('%H:%M:%S')
+        print('data:', dia_atual)
+        print('hora', hora_atual) 
+        print('='*30,'\n')
+                              
+        resposta_5 = str(input('Você é bom no que faz?\n'
                             '\n[1-Sim]'
                             '\n[2-Não]'
                             '\n[3-Não sei responder]'
                             '\nR: '))
-                            dia_atual = agora.strftime('%d/%m/%y')                      
-                            hora_atual = agora.strftime('%H:%M:%S')             
-                            print('data:', dia_atual)               
-                            print('hora', hora_atual)
+        
+        dia_atual = agora.strftime('%d/%m/%y')                      
+        hora_atual = agora.strftime('%H:%M:%S')             
+        print('data:', dia_atual)               
+        print('hora', hora_atual)
+        print('='*30,'\n')
         print('\nPróximo entrevistado! digite 00 na idade para parar!\n')
+        print('='*30,'\n')
+        
         writer.writerow([nome_entrevistado, idade_entrevistado, pronome_entrevistado, resposta_1, resposta_2, resposta_3, resposta_4, resposta_5, dia_atual, hora_atual])
