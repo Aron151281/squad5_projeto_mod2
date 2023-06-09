@@ -56,3 +56,5 @@ https://www.linkedin.com/in/jaqueline-cunha-01b6a1271/?lipi=urn%3Ali%3Apage%3Ad_
 
 Rafael César Pinto da Silva Andrade Lima 
 https://www.linkedin.com/in/rafael-data-analyst/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BaOogZpm6QwWvOj2DYO%2FCow%3D%3D
+Rafael César Pinto da Silva Andrade Lima 
+https://www.linkedin.com/in/rafael-data-analyst/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3BaOogZpm6QwWvOj2DYO%2FCow%3D%3D
