@@ -60,9 +60,9 @@ with open('respostas.csv','a', newline='') as file:
         if idade_entrevistado == '00':
             break
         dia_atual = agora.strftime('%d/%m/%y')
-        hora_atual = agora.strftime('%H:%M:%S'/n)                           
+        hora_atual = agora.strftime('%H:%M:%S\n')                           
         print('Data:', dia_atual, '-' 'Hora', hora_atual)       
-        print('='*30,'\n')       
+        print('='*30, '\n')       
         
         nome_entrevistado = str(input('Digite seu nome : '))
         dia_atual = agora.strftime('%d/%m/%y')
