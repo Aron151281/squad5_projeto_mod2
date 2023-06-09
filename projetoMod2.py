@@ -1,36 +1,26 @@
 import csv
 import datetime as dt
+from classe import Saudacao 
+
+msg_de_boasvindas = Saudacao()
 
 #obtem a data e hora atual
 agora = dt.datetime.now()
 
 #obtem o dia atual, com formato de saida especificado:
-dia_atual = agora.strftime('%d/%m/%y')
+dia_atual = msg_de_boasvindas.dia_atual
 
 #obtem a hora atual, com formato de saida especificado:
-hora_atual = agora.strftime('%H:%M:%S')
-
-#verifica o horario para determinar a saudação:
-saudacao = ''
-hora = agora.hour
-''
-# se a hora for maior ou igual  a 6 e menor que 12 , dizer bom dia :
-if 6 <= hora < 12:
-    saudacao = 'Olá, bom dia entrevistado(a)!'
-
-    # se a hora for maior ou igual a 12 e menor que 18 , dizer boa tarde:
-elif 12 <= hora < 18 :
-    saudacao ='Olá, boa tarde entrevistado(a)!'
-
-    # senao dizer boa noite:
-else:
-    saudacao = 'Olá, boa noite entrevistado(a)!'
+hora_atual = msg_de_boasvindas.hora_atual
 
 #exibe a data, hora e saudação
 print('='*30,'\n')
 print('Data:', dia_atual,'Hora', hora_atual)
 print()
-print(saudacao)
+
+msg_de_boasvindas = Saudacao()
+print(msg_de_boasvindas.bemvindo())
+
 
 # questionario de multliplas escolhas que irá mostrar data e hora da resposta.
 print('Seja bem vindo(a) ao questionário sobre a linguagem Python!')
